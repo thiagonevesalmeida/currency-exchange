@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --text-color: #0F172A;
+    --main-color: #7C3AED;
+    font-size: 65.5%; /*1rem = 10px*/
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F8FAFC;
+    color: var(--text-color);
+    font-size: 1.6rem;
+
+    height: 100vh;
+
+    display: grid;
+    place-content: center;
+}
+
+#app {
+    background-color: #fff;
+    box-shadow: .0rem .4rem 3.2rem rgba(15, 23, 42, 0.15);
+    padding: 1.6rem;
+    border-radius: 1.6rem;
+
+    display: grid;
+    gap: 3.2rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+/* section .converter */
+
+form {
+    display: grid;
+    gap: .8rem;
+
+    margin-top: 1.6rem;
+}
+
+.currency-box {
+    padding: 1.6rem;
+
+    outline: .1rem solid #94A3B8; 
+    border-radius: .8rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.currency-box:focus-within {
+    outline: .25rem solid #7C3AED;
+}
+
+input, select,
+input:focus, select:focus {
+    border: none;
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#to:hover,
+#currency2:hover {
+    cursor: not-allowed;
+}
+
+button.arrow {
+    background-color: transparent;
+    border: none;
+
+    width: fit-content;
+    margin: auto;
+}
+
+button.arrow:hover {
+    cursor: pointer;
+    transform: scale(1.2)
+}
+
+.currency-menu { 
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    padding-left: 1.6rem;
+    border-left: .1rem solid #94A3B8;
+}
+
+.fi.fis {
+    font-size: 2.4rem;
+    border-radius: 50%;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+/* section chart */
+.exchange-chart .container {
+    margin-top: 2.4rem;
+}
+
+.tooltip {
+    background-color: #fff;
+    box-shadow: 0 .4rem 1.6rem rgb(15 23 42 / .15);
+    padding: .8rem;
+    border-radius: .4rem;
+}
+
+.chart-controls {
+    display: flex;
+    justify-content: space-between;
+    margin: -2.2rem .8rem 0 4rem
+}
+
+.chart-controls button {
+    background-color: transparent;
+
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    text-align: center;
+
+    width: 4rem;
+    height: 2.4rem;
+    padding: .4rem .8rem;
+
+    border: none;
+    cursor: pointer;
+}
+
+.chart-controls button:hover,
+.chart-controls button.active {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 999px;
+}
+
+
+/* Adjustment to desktop media */
+@media (min-width: 53rem) {
+    #app {
+        padding: 6.4rem 8rem;
+        gap: 6.4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        display: flex;
+        gap: 1.6rem
+    }
+}

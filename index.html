@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+    <!--biblioteca flag-icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="app">
+        <section class="converter">
+            <h2>Currency Converter</h2>
+            <form>
+                <div class="currency-box">
+                    <input id="currency1" type="number" placeholder="R$ 0,00">
+                    <div class="currency-menu">
+                        <span class="fi fi-br fis"></span>
+                        <select name="from" id="from">
+                            <option value="BRL">BRL</option>
+                            <option value="USD">USD</option>
+                            <!-- <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option> -->
+                        </select>
+                    </div>
+                </div>
+                <button class="arrow" type="button">
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 5H19L15 1M15 9H1L5 13" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="currency-box">
+                    <input id="currency2" type="number" placeholder="$ 0.00" readonly>
+                    <div class="currency-menu">
+                        <span class="fi fi-us fis"></span>
+                        <select name="to" id="to" disabled>
+                            <option value="USD">USD</option>
+                            <option value="BRL">BRL</option>
+                            <!-- <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option> -->
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="exchange-chart">
+            <h2>Exchange Rate</h2>
+            <div class="container">
+                <div id="chart"></div>
+                <div class="chart-controls">
+                    <button>1D</button>
+                    <button>5D</button>
+                    <button class="active">1M</button>
+                    <button>1A</button>
+                    <button>5A</button>
+                    <button>Máx</button> 
+                </div>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script type="module" src="script.js"></script>
+    </main>
+</body>
+</html>
