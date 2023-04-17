@@ -12,6 +12,7 @@ chart.render()
 // Exchange Setup
 const exchange = new Exchange(form)
 
+// Arrow Switch behavior
 button.addEventListener("click", exchange.arrowSwitch)
 form.onchange = function (event) {
     if (event.target.id === "from" || event.target.id === "to") {
@@ -19,15 +20,8 @@ form.onchange = function (event) {
     }
 }
 
-form.querySelector('input').addEventListener('keyup', function(event) {
-    form.querySelector("#currency2").placeholder = exchange.calculate(event.target)
+form.addEventListener('keyup', function(event) {
+
+    // exchange trade API - test
+    exchange.dailyCurrency(event.target)
 })
-
-// form.querySelector('input').addEventListener('keyup', function(event) {
-
-//     // exchange trade API - test
-//     exchange.dailyCurrency(event.target)
-// })
-
-
-console.log(exchange.dailyCurrency())
