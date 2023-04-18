@@ -1,7 +1,7 @@
 <h1 align="center">Currency-Exchange 📈</h1>
 
 <p align="center">
-Developing an interactive and responsive Currency Converter Aplication 🤑
+Developing an interactive and responsive Currency Converter application 🤑
 </p>
 
 <p align="center">
@@ -35,7 +35,7 @@ This project was developed with the following technologies:
 
 ## 💻 Project
 
-Project of an interactive Currency Convertor application proposed by RocketSeat in the challenge #boraCodar 🚀. You can access the project online through [THIS LINK](https://thiagonevesalmeida.github.io/currency-exchange/)
+Project of an interactive Currency Convertor application proposed by RocketSeat at the #boraCodar challenge 🚀. You can access the project online through [THIS LINK](https://thiagonevesalmeida.github.io/currency-exchange/)
 
 ## 📚 Explored concepts
 
