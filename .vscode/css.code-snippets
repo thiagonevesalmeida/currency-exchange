@@ -1,0 +1,24 @@
+{
+    "Init my CSS": {
+        "scope": "css",
+        "prefix": "init",
+        "body": [
+            "* {",
+                "\tmargin: 0;",
+                "\tpadding: 0;",
+                "\tbox-sizing: content-box;",
+                "\t-webkit-font-smoothing: antialiased;",
+                "\t-moz-osx-font-smoothing: grayscale;",
+            "}",
+            "",
+            ":root {",
+                "\tfont-size: 65.5% /*1rem = 10px*/",
+            "}",
+            "",
+            "body {",
+                "\tfont-size: 1.6rem;",
+            "}"
+        ],
+        "description":"Init my CSS"
+    }
+}
